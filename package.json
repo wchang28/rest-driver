@@ -1,0 +1,17 @@
+{
+  "name": "rest-driver",
+  "version": "0.0.1",
+  "description": "$ Driver",
+  "typings": "index.d.ts",
+  "scripts": {},
+  "author": "Wen Chang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wchang28/rest-driver.git"
+  },
+  "dependencies": {
+    "eventsource-typings": "git+https://github.com/wchang28/eventsource-typings.git",
+    "rest-api-interfaces": "git+https://github.com/wchang28/rest-api-interfaces.git"
+  }
+}
