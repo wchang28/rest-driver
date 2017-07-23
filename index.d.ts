@@ -29,7 +29,7 @@ export type I$H = (url:string, qs?:any, options?: restIntf.ApiCallOptions) => Pr
 export type I$B = (url:string, qs?:any, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
 
 // upload file blob
-export type I$U = (method: restIntf.HTTPMethod, url:string, contentInfo: restIntf.ContentInfo, blob: IReadableBlob, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
+export type I$U = (method: restIntf.HTTPMethod, url:string, readableContent: restIntf.ReadableContent<IReadableBlob>, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
 
 // FormData factory
 export type IFormDataFactory = () => IFormData;
