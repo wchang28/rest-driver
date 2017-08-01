@@ -1,6 +1,6 @@
 {
   "name": "rest-driver",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "$ Driver",
   "typings": "index.d.ts",
   "scripts": {},

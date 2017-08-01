@@ -13,6 +13,17 @@ export interface I$EReturn {
 export type IReadableBlob = any;
 export type IFormData = any;
 
+export interface Progress {
+    processed: number;
+    total?: number;
+    percent?: number;
+    startTime: number;
+    elapseMS: number;
+    etaMS?: number;
+}
+
+export type ProgressCallback = (progress: Progress) => void;
+
 // JSON in and JSON out
 export type I$J = (method: restIntf.HTTPMethod, url:string, data:any, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
 
@@ -29,7 +40,7 @@ export type I$H = (url:string, qs?:any, options?: restIntf.ApiCallOptions) => Pr
 export type I$B = (url:string, qs?:any, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
 
 // upload file blob
-export type I$U = (method: restIntf.HTTPMethod, url:string, readableContent: restIntf.ReadableContent<IReadableBlob>, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
+export type I$U = (method: restIntf.HTTPMethod, url:string, readableContent: restIntf.ReadableContent<IReadableBlob>, progressCB: ProgressCallback, options?: restIntf.ApiCallOptions) => Promise<restIntf.RESTReturn>;
 
 // FormData factory
 export type IFormDataFactory = () => IFormData;
